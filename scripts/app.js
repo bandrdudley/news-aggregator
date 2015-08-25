@@ -160,7 +160,20 @@ APP.Main = (function() {
     }
 
   }
+  
+  function showStory() {
+	if (!storyDetails)
+      return;
 
+      storyDetails.classList.add('visible');
+	  storyDetails.classList.remove('hidden');
+  }
+  
+  function hideStory() {
+      storyDetails.classList.add('hidden');
+	  storyDetails.classList.remove('visible');
+  }
+/*
   function showStory(id) {
 
     if (inDetails)
@@ -247,7 +260,7 @@ APP.Main = (function() {
     // and they should be in a requestAnimationFrame
     setTimeout(animate, 4);
   }
-
+*/
   /**
    * Does this really add anything? Can we do this kind
    * of work in a cheaper way?
