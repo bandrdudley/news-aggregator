@@ -47,6 +47,10 @@ APP.Main = (function() {
     tmplStoryDetails = tmplStoryDetails.replace(intlRelative, '');
     tmplStoryDetailsComment = tmplStoryDetailsComment.replace(intlRelative, '');
   }
+  
+  var storyDetails = document.createElement('section');
+  storyDetails.classList.add('story-details');
+  document.body.appendChild(storyDetails);
 
   var storyTemplate =
       Handlebars.compile(tmplStory);
